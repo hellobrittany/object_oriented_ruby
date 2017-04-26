@@ -16,24 +16,16 @@ class Collar
 		@price = input_options[:price]
 	end
 
-	# def size
-	# 	@size 
-	# end
-	
-	# def color
-	# 	@color	
-	# end	
-
-	# def price
-	# 	@price
-	# end
-
-	
-	# def color=(new_color)
-	# 	color = new_color
-	# end
 
 end
+
+class Food < Collar
+	attr_reader :shelf_life
+	def initialize(input_options)
+		super(input_options)
+		@shelf_life = input_options[:shelf_life]
+	end
+end	
 
 
 collar_1 = Collar.new(
@@ -46,15 +38,22 @@ collar_2 = Collar.new(
 												color: "red", 
 												price: 14)
 
-puts collar_1.size
-puts collar_1.color
-puts collar_1.price
-collar_1.color = "blue"
-puts collar_1.color
+# puts collar_1.size
+# puts collar_1.color
+# puts collar_1.price
+# collar_1.color = "blue"
+# puts collar_1.color
 
-puts collar_2.size
-puts collar_2.color
-puts collar_2.price
+# puts collar_2.size
+# puts collar_2.color
+# puts collar_2.price
 
+food = Food.new(
+									size: "large", 
+									color: "red", 
+									price: 30, 
+									shelf_life: "6 months"
+									)
 
+puts food.shelf_life
 
