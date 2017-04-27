@@ -3,19 +3,19 @@ require "./food.rb"
 
 
 
-collar_1 = Collar.new(
+collar_1 = StoreFront::Collar.new(
 										size: "Medium", 
 										color: "pink", 
 										price: 10)
 
-collar_2 = Collar.new(
+collar_2 = StoreFront::Collar.new(
 												size: "Large", 
 												color: "red", 
 												price: 14)
 
 
 
-food = Food.new(
+food = StoreFront::Food.new(
 									size: "large", 
 									color: "red", 
 									price: 30, 
